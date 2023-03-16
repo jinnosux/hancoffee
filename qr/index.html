@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="HAN Coffee | Digitalni Meni" />
+
+    <meta property="og:title" content="HAN Coffee | Digitalni Meni" />
+    <meta property="og:type" content="Digitalni Meni" />
+    <meta property="og:url" content="https://instagram.com/hancoffee_novipazar" />
+    <meta property="og:image" content="https://i.imgur.com/wRq3hcn.png" />
+
+    <title>HAN Coffee | Digitalni Meni</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="libraries/dist/photoswipe.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link rel="preload" as="style" type="text/css" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" />
+    <script src="libraries/js/loader.js"></script>
+  </head>
+  <body onload="loader()" style="margin: 0; background: #000">
+    <div id="loader"></div>
+    <div id="bg" class="bg" style="display: none">
+      <div class="background-image"></div>
+      <div class="navbar">
+        <img src="assets/images/logo.png" />
+        <!-- <h2>Dobrodošli u Dohu</h1> -->
+      </div>
+      <div class="content">
+        <div class="top">
+          <div class="pswp-gallery" id="gallery--individual">
+            <a href="assets/images/akcija/akcija_doha.jpg" data-pswp-width="576" data-pswp-height="768" target="_blank">
+              <div class="btn">Promo</div>
+            </a>
+            <a href="assets/images/akcija/akcija_roze.jpg" data-pswp-width="575" data-pswp-height="1065" target="_blank"> </a>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="pswp-gallery" id="gallery--getting-started">
+            <a href="assets/images/meni/1.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank">
+              <div class="btn">Meni</div>
+            </a>
+            <a href="assets/images/meni/2.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/3.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/4.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/5.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/6.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/7.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/8.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/9.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/10.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/11.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/meni/12.jpg" data-pswp-width="980" data-pswp-height="1423" target="_blank"> </a>
+            <a href="assets/images/akcija/akcija_vocna2.jpg" data-pswp-width="1536" data-pswp-height="2048" target="_blank"> </a>
+            <a href="assets/images/akcija/akcija_vocna.jpg" data-pswp-width="2000" data-pswp-height="1500" target="_blank"> </a>
+          </div>
+
+          <div class="bottom-text">
+            <div class="bottom-btns">
+              <a href="https://www.google.com"><i class="bi bi-instagram"></a></i>
+              <i class="bi bi-geo-alt"></i>
+              <i class="bi bi-facebook"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script type="module">
+      // Include Lightbox
+      import PhotoSwipeLightbox from "./libraries/dist/photoswipe-lightbox.esm.min.js";
+
+      const lightboxTop = new PhotoSwipeLightbox({
+        gallery: "#gallery--individual",
+        children: "a",
+        showHideAnimationType: "fade",
+        imageClickAction: "next",
+        tapAction: "next",
+        loop: false,
+        arrowKeys: true,
+
+        // setup PhotoSwipe Core dynamic import
+        pswpModule: () => import("./libraries/dist/photoswipe.esm.min.js"),
+      });
+
+      const lightboxBottom = new PhotoSwipeLightbox({
+        gallery: "#gallery--getting-started",
+        children: "a",
+        showHideAnimationType: "fade",
+        imageClickAction: "next",
+        tapAction: "next",
+        loop: false,
+        index: 0,
+        arrowKeys: true,
+        preload: [1, 4],
+
+        // setup PhotoSwipe Core dynamic import
+        pswpModule: () => import("./libraries/dist/photoswipe.esm.min.js"),
+      });
+
+      lightboxTop.init();
+      lightboxBottom.init();
+    </script>
+  </body>
+</html>
