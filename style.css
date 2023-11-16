@@ -4,29 +4,79 @@ body, html {
    padding: 0;
 }
 
-img {
+img, svg {
    max-width: 100%;
+   display:block;
+}
+
+button {
+   border: none;
+   padding: 0;
+   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   text-decoration: none;
 }
 
 :root {
    /* INIT VALUES */
    --pd-horizontal: 100px;
-   --pd-vertical: 200px;
+   --pd-vertical: 100px;
+
+   --mg-text-large: 60px;
+   --mg-text-medium: 30px;
+   --mg-text-small: 10px;
 
    --clr-primary:#0B2E1C;
    --clr-secondary: #C18A2B;
    --clr-secondary-muted: #8F7127;
    --clr-neutral: #FFFF;
    
-   --fs-h: 4rem;
+   --fs-h: 6rem;
    --fs-sh: 3rem;
    --fs-pr: 2rem;
-   --fs-body: 1rem;
+   --fs-body: 1.8rem;
 
    --gp-grid: 60px;
 }
 
+.mg-top-l {
+   margin-top: var(--mg-text-large);
+}
+
+.mg-bottom-l {
+   margin-bottom: var(--mg-text-large);
+}
+
+.mg-top-m {
+   margin-top: var(--mg-text-medium);
+}
+
+.mg-bottom-medium {
+   margin-bottom: var(--mg-text-medium);
+}
+
+.mg-top-s {
+   margin-top: var(--mg-text-small);
+}
+
+.mg-bottom-s {
+   margin-bottom: var(--mg-text-small);
+}
+
 /* UTILITY CLASSES */
+
+.mw-phone {
+   width: min(100vw, 900px);
+   margin: 0 auto;
+}
+
 .pd-horizontal {
    padding-left: var(--pd-horizontal);
    padding-right: var(--pd-horizontal);
@@ -89,9 +139,26 @@ img {
    gap: var(--gp-grid);
 }
 
+.txt-left {
+   text-align: left;
+}
+
+.txt-right {
+   text-align: right;
+}
+
+.txt-center{
+   text-align: center;
+}
+
 /* APP */
 section {
    padding: var(--pd-vertical) var(--pd-horizontal);
+}
+
+section:nth-child(1) button {
+   padding: 2rem 4rem;
+   border-radius: 3rem;
 }
 
 .hero {
@@ -134,29 +201,22 @@ section {
 
 .shape {
    border-radius: 50% 50% 0 50%;
+   aspect-ratio: 1/1;
 }
 
 /* DOBRODOSLI */
-section:nth-child(2) {
+section:nth-child(2) > .mw-phone {
    display:flex;
+   gap: 5rem;
    align-items: center;
-   justify-content: space-around;
 }
 
-section:nth-child(2) > * {
+section:nth-child(2) > .mw-phone > * {
    flex: 1;
 }
 
-section:nth-child(2) h2 {
-   text-align: center;
-}
-
-section:nth-child(2) p {
-   text-align: justify;
-}
-
 /* SPECIJALITET */
-section:nth-child(3) {
+section:nth-child(3) > .mw-phone {
    --pd-horizontal: 600px;
    display: grid;
    align-items: center;
@@ -178,10 +238,16 @@ section:nth-child(4) {
    text-align: center;
 }
 
+section:nth-child(4) button {
+   padding: 2rem 4rem;
+   border-radius: 1rem;
+}
+
 /* REVOLUCIJA */
-section:nth-child(5) {
+section:nth-child(5) > .mw-phone {
    display:grid;
    grid-template-columns: 1fr 1fr;
+   align-items: center;
 }
 
 .revolucija-img {
@@ -189,4 +255,127 @@ section:nth-child(5) {
    background-size: 100%;
    background-repeat: no-repeat;
    background-position: center;
+   border-radius: 2rem 10rem 10rem 10rem;
+   min-height: 50vh;
+}
+
+/* AMIR AGIN HAN */
+section:nth-child(6) > .mw-phone {
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   grid-template-rows: 1fr 1fr;
+   justify-items: center;
+   align-items: center;
+   max-height: 30vh;
+}
+
+section:nth-child(6) > .mw-phone > img {
+   grid-row: 1/3;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* PITANJA */
+.q-container {
+   display:flex;
+   justify-content: space-around;
+   gap: 4rem;
+}
+
+.q-c {
+   flex: 1;
+}
+
+/* FOOTER */
+.socials > a > svg {
+   display:block;
+   margin: 0 auto;
+   height:4rem;
+   aspect-ratio: 1/1;
+   fill:white;
+   margin-bottom: 1rem; 
+}
+
+.socials p {
+   font-size: 10px;  
+}
+
+/* TABLET */
+
+@media screen and (max-width: 1300px) {
+      .hero {
+         grid-template-columns: 1fr;
+         align-items: center;
+      }
+
+      .hero-text {
+         display: flex;
+         flex-direction: column;
+         align-items: stretch;
+      }
+
+      .hero a {
+         display: flex;
+         align-items: stretch;
+         flex-direction: column;
+      }
+
+      section:nth-child(2) > .mw-phone {
+         flex-direction: column;
+      }
+
+      section:nth-child(3) > .mw-phone {
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr;
+         justify-items: center;
+      }
+
+      .kar-img {
+         height: 100%;
+         width: 60%;
+      }
+
+      section:nth-child(5) > .mw-phone{
+         grid-template-columns: 1fr;
+      }
+
+      section:nth-child(6) > .mw-phone {
+         grid-template-columns: 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         min-height: 100svh;
+      }
+
+      section:nth-child(6) > .mw-phone > img {
+         grid-row: 2/3;
+         max-height: 100%;
+         object-fit: cover;
+      }
+
+      .q-container {
+         flex-direction: column;
+      }
+}
+
+@media screen and (max-width: 900px) {
+   :root {
+      /* INIT VALUES */
+      --pd-horizontal: 100px;
+      --pd-vertical: 100px;
+   
+      --mg-text-large: 60px;
+      --mg-text-medium: 30px;
+      --mg-text-small: 10px;
+   
+      --clr-primary:#0B2E1C;
+      --clr-secondary: #C18A2B;
+      --clr-secondary-muted: #8F7127;
+      --clr-neutral: #FFFF;
+      
+      --fs-h: 5rem;
+      --fs-sh: 4rem;
+      --fs-pr: 1rem;
+      --fs-body: 0.8rem;
+   
+      --gp-grid: 30px;
+   }
 }
