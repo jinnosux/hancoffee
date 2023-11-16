@@ -1,3 +1,5 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Nunito+Sans:opsz@6..12&display=swap');
 /* RESET */
 body, html {
    margin: 0;
@@ -13,6 +15,10 @@ button {
    border: none;
    padding: 0;
    margin: 0;
+}
+
+button:hover {
+   cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -43,7 +49,20 @@ a {
    --fs-pr: 2rem;
    --fs-body: 1.8rem;
 
+   --ff-aboreto: 'Aboreto', 'sans-serif';
+   --ff-nunito: 'Nunito', 'sans-serif';
+
    --gp-grid: 60px;
+}
+
+/* UTILITY CLASSES */
+
+.ff-aboreto {
+   font-family: var(--ff-aboreto);
+}
+
+.ff-nunito {
+   font-family: var(--ff-nunito);
 }
 
 .mg-top-l {
@@ -69,8 +88,6 @@ a {
 .mg-bottom-s {
    margin-bottom: var(--mg-text-small);
 }
-
-/* UTILITY CLASSES */
 
 .mw-phone {
    width: min(100vw, 900px);
@@ -171,6 +188,7 @@ section:nth-child(1) button {
 
 .hero-img {
    display: grid;
+   gap: 3rem;
    height: 100%;
    width: 100%;
    grid-template-rows: repeat(2, 1fr);
@@ -300,7 +318,7 @@ section:nth-child(6) > .mw-phone > img {
    font-size: 10px;  
 }
 
-/* TABLET */
+/* TELEFON */
 
 @media screen and (max-width: 1300px) {
       .hero {
@@ -311,7 +329,13 @@ section:nth-child(6) > .mw-phone > img {
       .hero-text {
          display: flex;
          flex-direction: column;
+         gap: 3rem;
+         padding-bottom: 3rem;
          align-items: stretch;
+      }
+
+      .hero-img {
+         gap: 2rem;
       }
 
       .hero a {
@@ -357,25 +381,5 @@ section:nth-child(6) > .mw-phone > img {
 }
 
 @media screen and (max-width: 900px) {
-   :root {
-      /* INIT VALUES */
-      --pd-horizontal: 100px;
-      --pd-vertical: 100px;
    
-      --mg-text-large: 60px;
-      --mg-text-medium: 30px;
-      --mg-text-small: 10px;
-   
-      --clr-primary:#0B2E1C;
-      --clr-secondary: #C18A2B;
-      --clr-secondary-muted: #8F7127;
-      --clr-neutral: #FFFF;
-      
-      --fs-h: 5rem;
-      --fs-sh: 4rem;
-      --fs-pr: 1rem;
-      --fs-body: 0.8rem;
-   
-      --gp-grid: 30px;
-   }
 }
