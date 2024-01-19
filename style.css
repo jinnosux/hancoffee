@@ -25,6 +25,10 @@ img, svg {
    font-family: "Nunito", sans-serif;
 }
 
+.txt-center {
+   text-align: center;
+}
+
 :root {
    --clr-green: #0B2E1C;
    --clr-orange: #C18A2B;
