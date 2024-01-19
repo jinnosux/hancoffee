@@ -245,3 +245,12 @@ footer {
    width: 32px;
    height: 32px;
 }
+
+.copyright-link {
+   color: var(--clr-orange);
+}
+
+.copyright-link:hover {
+   cursor:pointer;
+   text-decoration: underline;
+}
