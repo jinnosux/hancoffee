@@ -4,7 +4,7 @@ html, body {
    margin: 0;
    padding: 0;
 }
-
+   
 *, *::before, *::after {
    padding: 0;
    margin: 0;
@@ -114,11 +114,11 @@ img, svg {
    padding: 60px 20px;
 }
 
-.caramel-container > h2 {
+.caramel-container h2 {
    font-size: 2rem;
 }
 
-.caramel-container > p {
+.caramel-container p {
    font-size: 1rem;
 }
 
@@ -253,4 +253,67 @@ footer {
 .copyright-link:hover {
    cursor:pointer;
    text-decoration: underline;
+}
+
+@media only screen and (min-width: 992px) {
+   .hero {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      align-items:center;
+      gap: 2rem;
+   }
+
+   .hero-text h1 {
+      font-size: 4rem;
+   }
+
+   .hero-text h2 {
+      font-size: 1.5rem;
+   }
+   
+   .hero-text button {
+      display:block;
+      width: auto;
+      margin: 0 auto;
+      margin-top: 20px;
+   }
+
+   .welcome-container {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items:center;
+      align-items:center;
+      min-height: 50vh;
+   }
+
+   .welcome-container h2 {
+      font-size:3rem;
+   }
+
+   .welcome-container p {
+      font-size: 1.3rem;
+   }
+
+   .caramel-container {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      min-height: 50vh;
+      padding: 50px;
+      gap: 30px;
+   }   
+
+   .kar-image {
+      min-height: 100%;
+      min-width: 100%;
+   }
+
+   .order-container h2 {
+      font-size: 3rem;
+   }
+
+   .order-container > button {
+      width: auto;
+   }
 }
