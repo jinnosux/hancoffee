@@ -4,11 +4,12 @@ html, body {
    margin: 0;
    padding: 0;
 }
-
+   
 *, *::before, *::after {
    padding: 0;
    margin: 0;
    font: inherit;
+   box-sizing: border-box;
 }
 
 img, svg {
@@ -114,11 +115,11 @@ img, svg {
    padding: 60px 20px;
 }
 
-.caramel-container > h2 {
+.caramel-container h2 {
    font-size: 2rem;
 }
 
-.caramel-container > p {
+.caramel-container p {
    font-size: 1rem;
 }
 
@@ -253,4 +254,113 @@ footer {
 .copyright-link:hover {
    cursor:pointer;
    text-decoration: underline;
+}
+
+@media only screen and (min-width: 992px) {
+
+   .hero {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      align-items:center;
+      gap: 2rem;
+   }
+
+   .hero-text h1 {
+      font-size: 4rem;
+   }
+
+   .hero-text h2 {
+      font-size: 1.5rem;
+   }
+   
+   .hero-text button {
+      display:block;
+      width: auto;
+      margin: 0 auto;
+      margin-top: 20px;
+   }
+
+   .welcome-container {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items:center;
+      align-items:center;
+      min-height: 50vh;
+   }
+
+   .welcome-container h2 {
+      font-size:3rem;
+   }
+
+   .welcome-container p {
+      font-size: 1.3rem;
+   }
+
+   .caramel-container {
+      padding: 50px; 
+   }   
+
+   .max-1000 {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      min-height: 500px;
+      max-width: 1000px;
+      gap: 30px;
+      margin: 0 auto;
+   }
+
+   .kar-image {
+      min-height: 100%;
+      min-width: 100%;
+   }
+
+   .order-container h2 {
+      font-size: 3rem;
+   }
+
+   .order-container > button {
+      width: auto;
+   }
+
+   .helper {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 100px;
+      max-width: 1300px;
+      margin: 0 auto;
+      gap: 60px;
+      align-items: center;
+
+   }
+
+   .revolution-img {
+      border-radius: 2rem 10rem 10rem 10rem;
+   }
+
+   .han-container {
+      display: grid;
+      gap: 50px;
+   }
+   
+   .han-container > * {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+   }
+
+   .han-img {
+      background-position: center;
+   }
+
+   .faq-container h2 {
+      font-size: 3rem;
+      text-align: center;
+   }
+
+   .faq-all {
+      display: flex;
+      justify-content: space-around;
+   }
 }
