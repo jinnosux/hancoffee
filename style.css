@@ -17,6 +17,10 @@ img, svg {
    display:block;
 }
 
+button:hover {
+   cursor: pointer;
+}
+
 /* UTILS */
 .ff-aboreto {
    font-family: "Aboreto", system-ui;
