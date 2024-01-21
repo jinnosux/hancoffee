@@ -298,7 +298,7 @@ footer {
 
    .caramel-container {
       padding: 50px; 
-   }   
+   }
 
    .max-1000 {
       display:grid;
@@ -332,7 +332,10 @@ footer {
       margin: 0 auto;
       gap: 60px;
       align-items: center;
+   }
 
+   .helper h2 {
+      font-size: 3rem;
    }
 
    .revolution-img {
@@ -348,6 +351,10 @@ footer {
       height: 100%;
       width: 100%;
       text-align: center;
+   }
+
+   .han-container h2 {
+      font-size: 3rem;
    }
 
    .han-img {
