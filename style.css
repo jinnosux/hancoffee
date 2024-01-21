@@ -9,6 +9,7 @@ html, body {
    padding: 0;
    margin: 0;
    font: inherit;
+   box-sizing: border-box;
 }
 
 img, svg {
@@ -256,6 +257,7 @@ footer {
 }
 
 @media only screen and (min-width: 992px) {
+
    .hero {
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -295,14 +297,19 @@ footer {
    }
 
    .caramel-container {
+      padding: 50px; 
+   }   
+
+   .max-1000 {
       display:grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-items: center;
-      min-height: 50vh;
-      padding: 50px;
+      min-height: 500px;
+      max-width: 1000px;
       gap: 30px;
-   }   
+      margin: 0 auto;
+   }
 
    .kar-image {
       min-height: 100%;
@@ -315,5 +322,45 @@ footer {
 
    .order-container > button {
       width: auto;
+   }
+
+   .helper {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 100px;
+      max-width: 1300px;
+      margin: 0 auto;
+      gap: 60px;
+      align-items: center;
+
+   }
+
+   .revolution-img {
+      border-radius: 2rem 10rem 10rem 10rem;
+   }
+
+   .han-container {
+      display: grid;
+      gap: 50px;
+   }
+   
+   .han-container > * {
+      height: 100%;
+      width: 100%;
+      text-align: center;
+   }
+
+   .han-img {
+      background-position: center;
+   }
+
+   .faq-container h2 {
+      font-size: 3rem;
+      text-align: center;
+   }
+
+   .faq-all {
+      display: flex;
+      justify-content: space-around;
    }
 }
