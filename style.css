@@ -346,15 +346,16 @@ footer {
       border-radius: 2rem 10rem 10rem 10rem;
    }
 
-   .han-container {
+   .han-max {
       display: grid;
-      gap: 50px;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1000px;
+      margin: 0 auto;
    }
-   
-   .han-container > * {
-      height: 100%;
-      width: 100%;
-      text-align: center;
+
+   .han-helper {
+      display:grid;
+      align-items: baseline;
    }
 
    .han-container h2 {
@@ -363,6 +364,8 @@ footer {
 
    .han-img {
       background-position: center;
+      grid-column: 1;
+      grid-row: 1/3;
    }
 
    .faq-container h2 {
