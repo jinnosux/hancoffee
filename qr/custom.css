@@ -1,0 +1,13 @@
+.hover-div {
+  position: sticky;
+  margin-top: 20px;
+  margin-left: 50px;
+  box-shadow: 0 0 0 2px white;
+  z-index: 10000;
+  max-width: fit-content;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
